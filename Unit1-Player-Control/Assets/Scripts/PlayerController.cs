@@ -26,13 +26,16 @@ public class PlayerController : MonoBehaviour
 
             if (accel != 0)
             {
-                transform.Translate(0, 0, accel * speed);
                 transform.Rotate(0, turn * turnSpeed, 0);
             }
 
+            transform.Translate(0, 0, Time.deltaTime * speed * accel);
+
+
             for (int i = 0; i < 2; i++)
             {
-                transform.GetChild(i).Rotate(30 * accel, turn * turnSpeed, 0);
+                //Wheel spin
+                transform.GetChild(i).Rotate(0, turnSpeed * turn * Time.deltaTime, 0);
             }
         }
     }
