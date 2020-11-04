@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AudioEvent = FMODUnity.StudioEventEmitter;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class PlayerController : MonoBehaviour
 
     private int numGroundObjectsInContact = 0;
 
+    private AudioEvent engineAudio; 
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        engineAudio = GetComponent<AudioEvent>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class PlayerController : MonoBehaviour
         {
             float accel = Input.GetAxis("Vertical");
             float turn = Input.GetAxis("Horizontal");
+
+            engineAudio.SetParameter("speed", accel);
 
             if (accel == 0)
             {
