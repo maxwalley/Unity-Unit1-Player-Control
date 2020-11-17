@@ -59,4 +59,9 @@ sysinfo.txt
 crashlytics-build.properties
 
 FMOD/Audio Assets
+FMOD/PlayerControl/Assets
+FMOD/PlayerControl/.cache
+FMOD/PlayerControl/.user
+
+Unit1-Player-Control/Temp
 

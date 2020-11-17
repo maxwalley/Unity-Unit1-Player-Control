@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 114380445572104056}
   StringsBanks:
   - {fileID: 114883984253374256}
-  stringsBankWriteTime: 637400863890000000
+  stringsBankWriteTime: 637412244100000000
   cacheVersion: 5
 --- !u!114 &114380445572104056
 MonoBehaviour:
@@ -38,7 +38,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD/PlayerControl/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637400863890000000
+  lastModified: 637412244100000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -62,6 +62,26 @@ MonoBehaviour:
     data1: 2508184185
     data2: 636224438
   Exists: 0
+--- !u!114 &114606162487282092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &114883984253374256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,13 +96,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD/PlayerControl/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637400863890000000
+  lastModified: 637412244100000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 790
   Exists: 1
 --- !u!114 &114887586645816694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &114977659726150758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,11 +158,11 @@ MonoBehaviour:
   guid: 54bc5a8aae165d449b27ba9abb484f17
   Banks:
   - {fileID: 114380445572104056}
-  IsStream: 1
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114887586645816694}
+  - {fileID: 114977659726150758}
   MinDistance: 1
   MaxDistance: 20
-  Length: 16025
+  Length: 26875

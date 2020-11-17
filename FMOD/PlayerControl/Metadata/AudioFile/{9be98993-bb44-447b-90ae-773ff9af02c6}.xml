@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9be98993-bb44-447b-90ae-773ff9af02c6}">
+		<property name="assetPath">
+			<value>Yaris Transition To High.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2acc7e76-419f-46fd-9c42-aa8b3436616f}</destination>
+		</relationship>
+	</object>
+</objects>

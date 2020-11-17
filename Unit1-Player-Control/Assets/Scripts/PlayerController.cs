@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool onGround = false;
 
     private int numGroundObjectsInContact = 0;
+    private float lastAccel = 0.0f;
 
     private AudioEvent engineAudio; 
 
@@ -28,12 +29,15 @@ public class PlayerController : MonoBehaviour
             float accel = Input.GetAxis("Vertical");
             float turn = Input.GetAxis("Horizontal");
 
-            engineAudio.SetParameter("speed", accel);
-
             if (accel == 0)
             {
                 turn = 0;
             }
+
+            /*else if (accel < 0)
+            {
+                turn *= -1;
+            }*/
 
             transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
             transform.Translate(0, 0, Time.deltaTime * speed * accel);
@@ -42,6 +46,20 @@ public class PlayerController : MonoBehaviour
             {
                 transform.GetChild(i).Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
             }
+
+            accel = System.Math.Abs(accel);
+
+            //If we're decellerating
+            if (accel < lastAccel)
+            {
+                engineAudio.SetParameter("speed", 0.0f);
+            }
+            else
+            {
+                engineAudio.SetParameter("speed", accel);
+            }
+
+            lastAccel = accel;
         }
     }
 
