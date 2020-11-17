@@ -34,10 +34,11 @@ public class PlayerController : MonoBehaviour
                 turn = 0;
             }
 
-            /*else if (accel < 0)
+            //Invert turning direction if going backwards
+            else if (accel < 0)
             {
                 turn *= -1;
-            }*/
+            }
 
             transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
             transform.Translate(0, 0, Time.deltaTime * speed * accel);
